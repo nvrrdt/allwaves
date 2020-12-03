@@ -8,7 +8,7 @@ def work(i):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     # Connect the socket to the port where the server is listening
-    server_address = (sys.argv[i+1], 10000)
+    server_address = (sys.argv[i+1], 10000 + i)
     print('connecting to {} port {}'.format(*server_address))
     sock.connect(server_address)
 
